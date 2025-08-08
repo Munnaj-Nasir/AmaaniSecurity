@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Get a Quote</title>
+  <link rel="stylesheet" href="/style/main.css">
+  <link rel="icon" href="Assets/images/Favicon.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    form {
+      max-width: 600px;
+      margin: auto;
+      background: #fff;
+      padding: 25px;
+      border-radius: 8px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    }
+
+    label {
+      display: block;
+      margin: 15px 0 5px;
+      font-weight: bold;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      margin-bottom: 15px;
+    }
+
+    .subtype-group {
+      display: none;
+    }
+
+    button {
+      background: #234B9B;
+      color: white;
+      padding: 12px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      border: 1px solid #234B9B;
+      background-color: #fff;
+      color: #1C1B1B;
+    }
+
+    .success {
+      background: #e6ffe6;
+      padding: 15px;
+      margin-top: 20px;
+      border: 1px solid #b2ffb2;
+      border-radius: 5px;
+      color: green;
+    }
+  </style>
+</head>
+<body>
+   <header class="navbar">
+    <div class="container">
+      <div class="logo"><a href="index.html"><img src="Assets/images/Final Logo-nav1.png" alt=""></a></div>
+      <nav class="nav-links" id="navLinks">
+        <a href="index.html">Home</a>
+        <div class="dropdown">
+          <a href="AllServices.html">Services</a>
+          <div class="dropdown-content">
+            <a href="Eventsecurity.html">Event Security</a>
+            <a href="CCTVsurveillance.html">CCTV surveillance</a>
+            <a href="AccessControlSystems.html">Access control systems</a>
+            <a href="Patrolling.html">Patrolling</a>
+            <a href="Securityguards.html">Security guards</a>
+            <a href="VIPExecutiveprotection.html">VIP/Executive Protection</a>
+            <a href="Gatemanagement.html">Gate Management</a>
+            <a href="Dogsquadssniffer.html">Dog Squad/ Sniffer Dog</a>
+          </div>
+        </div>
+        <a href="Aboutus.html">About</a>
+        <a href="Contactus.html">Contact</a>
+      </nav>
+      <div class="burger" id="burger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </header>
+  <h1 style="color: #234B9B; margin-top: 100px; margin-bottom: 100px; text-align: center;" >Request a Quote</h1>
+ <form id="form">
+  <input type="text" name="name" placeholder="Name" required />
+  <input type="email" name="email" placeholder="Email" required />
+  <input type="text" name="phone" placeholder="Phone" required />
+
+  <!-- Service Dropdown -->
+  <select name="service" id="service" required>
+    <option value="">-- Select Service --</option>
+    <option value="Security guards (armed/unarmed)">Security guards (armed/unarmed)</option>
+    <option value="CCTV surveillance">CCTV surveillance</option>
+    <option value="Access control systems (e.g., biometric/fingerprint)">Access control systems</option>
+    <option value="Patrolling (foot/mobile patrol)">Patrolling</option>
+    <option value="Event security">Event security</option>
+    <option value="VIP/Executive protection">VIP/Executive protection</option>
+    <option value="Gate management">Gate management</option>
+    <option value="Dog squads/sniffer dogs">Dog squads/sniffer dogs</option>
+  </select>
+
+  <!-- Subtype Dropdown -->
+  <select name="subtype" id="subtype" required>
+    <option value="">-- Select Subtype --</option>
+  </select>
+
+  <textarea name="message" placeholder="Message"></textarea>
+  <button type="submit">Submit</button>
+</form>
+
+
+
+    <div class="success" id="successMsg" style="display: none;">
+    ✅ Your request has been submitted. We will contact you as soon as possible.
+  </div>
+
+  
+  <footer class="nsg-footer">
+    <div class="footer-container">
+      <!-- Left Column -->
+      <div class="footer-column">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="PrivacyPolicy.html">Privacy Policy</a></li>
+          <li><a href="TermsandCondition.html">Terms & Conditions</a></li>
+          <li><a href="Aboutus.html">About Us</a></li>
+        </ul>
+      </div>
+
+      <!-- Center Column -->
+      <div class="footer-center">
+        <img src="Assets/images/Final Logo-nav1.png" alt="NSG Logo" class="footer-logo" />
+        <div class="footer-socials">
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+
+      <!-- Right Column -->
+      <div class="footer-column">
+        <h4>Get In Touch!</h4>
+        <ul>
+          <li><a href="#"><span style="margin-right: 15px;"><i
+                  class="fa-solid fa-phone"></i></span><span>+44-7585-016063</span></a></li>
+          <li><a href="#"><span style="margin-right: 15px;"><i
+                  class="fa-solid fa-phone"></i></span><span>+44-7391-798619</span></a></li>
+          <li><a href="#"><span style="margin-right: 15px;"><i
+                  class="fa-solid fa-envelope"></i></span><span>amaanisec@gmail.com</span></a></li>
+          <!-- <li><a href="#">Calculate</a></li>
+        <li><a href="#">Our Team</a></li> -->
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-subscribe">
+      <input type="email" placeholder="Enter your email" />
+      <button>Subscribe</button>
+    </div>
+  </footer>
+ <script>
+  const form = document.getElementById("form");
+  const serviceSelect = document.getElementById("service");
+  const subtypeSelect = document.getElementById("subtype");
+
+  const formURL = "https://script.google.com/macros/s/AKfycbyD9_kIWbPagtQJ14z0pJy0Vv9YxFPuDvLzidExRS7MHdtQuddHxvIYw3QDS5V01YUR/exec"; // Replace this
+
+  const subtypeOptions = {
+    "Security guards (armed/unarmed)": ["Armed", "Unarmed"],
+    "CCTV surveillance": ["Installation", "Monitoring", "Maintenance"],
+    "Access control systems (e.g., biometric/fingerprint)": ["Biometric", "RFID Card", "PIN Code"],
+    "Patrolling (foot/mobile patrol)": ["Foot Patrol", "Mobile Patrol"],
+    "Event security": ["Concert", "Conference", "Wedding", "Exhibition"],
+    "VIP/Executive protection": ["Corporate", "Celebrity", "Political"],
+    "Gate management": ["Residential", "Commercial", "Industrial"],
+    "Dog squads/sniffer dogs": ["Explosives Detection", "Narcotics Detection", "Guard Dogs"]
+  };
+
+  serviceSelect.addEventListener("change", () => {
+    const selectedService = serviceSelect.value;
+    subtypeSelect.innerHTML = `<option value="">-- Select Subtype --</option>`; // Reset
+
+    if (subtypeOptions[selectedService]) {
+      subtypeOptions[selectedService].forEach(subtype => {
+        const option = document.createElement("option");
+        option.value = subtype;
+        option.textContent = subtype;
+        subtypeSelect.appendChild(option);
+      });
+    }
+  });
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const data = {
+      name: form.name.value,
+      email: form.email.value,
+      phone: form.phone.value,
+      service: form.service.value,
+      subtype: form.subtype.value,
+      message: form.message.value
+    };
+
+    fetch(formURL, {
+      method: "POST",
+      mode: "no-cors",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(data)
+    })
+      .then(() => {
+        alert("✅ Form submitted successfully!");
+        form.reset();
+        subtypeSelect.innerHTML = `<option value="">-- Select Subtype --</option>`;
+      })
+      .catch((err) => alert("❌ Error submitting form: " + err.message));
+  });
+</script>
+
+</body>
+</html>

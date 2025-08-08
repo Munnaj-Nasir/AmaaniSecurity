@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Form Submissions - Backend</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 30px;
+      background: #f0f0f5;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    .submission {
+      background: #fff;
+      border: 1px solid #ddd;
+      padding: 15px;
+      margin: 20px auto;
+      border-radius: 8px;
+      max-width: 600px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.05);
+    }
+
+    .submission p {
+      margin: 6px 0;
+    }
+
+    .no-data {
+      text-align: center;
+      margin-top: 50px;
+      color: gray;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Submitted Quote Requests</h1>
+
+  <div id="submissions"></div>
+
+  <script>
+    const container = document.getElementById("submissions");
+    const data = JSON.parse(localStorage.getItem("formSubmissions") || "[]");
+
+    if (data.length === 0) {
+      container.innerHTML = `<p class="no-data">No submissions yet.</p>`;
+    } else {
+      data.forEach((item, index) => {
+        container.innerHTML += `
+          <div class="submission">
+            <p><strong>Name:</strong> ${item.name}</p>
+            <p><strong>Email:</strong> ${item.email}</p>
+            <p><strong>Phone:</strong> ${item.phone}</p>
+            <p><strong>Service:</strong> ${item.service}</p>
+            <p><strong>Subtype:</strong> ${item.subtype}</p>
+            <p><strong>Message:</strong> ${item.message}</p>
+            <p><strong>Time:</strong> ${item.time}</p>
+          </div>
+        `;
+      });
+    }
+  </script>
+
+</body>
+</html>
