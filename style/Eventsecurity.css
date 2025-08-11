@@ -35,7 +35,26 @@ body {
   padding: 0;
   line-height: 1.6;
 }
+.contact-float-btn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: #25d366;
+  color: #FFFFFF;
+  font-weight: 600;
+  font-size: 0.9rem;
+  padding: 14px 20px;
+  border-radius: 50px;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(90, 103, 216, 0.3);
+  transition: background 0.3s ease, transform 0.3s ease;
+  z-index: 999;
+}
 
+.contact-float-btn:hover {
+  background-color: #075e54;
+  transform: translateY(-3px);
+}
 /* Hero Section */
 .hero {
   padding: 4rem 2rem;
@@ -874,4 +893,5 @@ body {
     flex: none;
     width: 100%;
   }
+
 }
